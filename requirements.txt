@@ -5,3 +5,5 @@ pandas
 matplotlib
 seaborn
 tensorflow
+opencv-python
+ultralytics

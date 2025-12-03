@@ -1,3 +1,4 @@
 myenv/
 gpu_test.py
 face_mask_model.keras
+yolov8nfa.pt
