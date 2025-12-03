@@ -2,6 +2,6 @@ ipykernel
 kaggle
 numpy
 pandas
-tensorflow
 matplotlib
 seaborn
+tensorflow
