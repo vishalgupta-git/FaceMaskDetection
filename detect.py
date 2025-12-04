@@ -3,6 +3,7 @@ import numpy as np
 from ultralytics import YOLO
 from tensorflow.keras.models import load_model
 yolo_face = YOLO("yolov8nfa.pt")
+yolo_face.verbose = False
 
 # Load mask classification CNN model
 mask_model = load_model("face_mask_model.keras")
@@ -34,7 +35,7 @@ def detect_and_annotate(frame):
     """
 
     annotated = frame.copy()
-    results = yolo_face(frame)
+    results = yolo_face(frame,verbose=False)
 
     for r in results:
         for box in r.boxes:

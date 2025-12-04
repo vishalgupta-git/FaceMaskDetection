@@ -3,3 +3,4 @@ gpu_test.py
 face_mask_model.keras
 yolov8nfa.pt
 .idea
+__pycache__/
