@@ -8,7 +8,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0=all, 1=info, 2=warning, 3=error
 
 
-# Loading Data and Train test Split
+# Loading Data and Train test Split (80,20)
 
 train_ds = tf.keras.utils.image_dataset_from_directory(
     directory='./data',
