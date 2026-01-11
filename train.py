@@ -2,14 +2,19 @@ import tensorflow as tf
 from tensorflow import keras
 from keras import Sequential
 from keras.layers import Dense,Conv2D,MaxPooling2D,Flatten,BatchNormalization,Dropout,Input
-
+import kaggle
 import matplotlib.pyplot as plt
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0=all, 1=info, 2=warning, 3=error
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  
+
+
+#Download the Face Image Dataset
+kaggle.api.authenticate()
+kaggle.api.dataset_download_files('omkargurav/face-mask-dataset',unzip=True)
+
 
 
 # Loading Data and Train test Split (80,20)
-
 train_ds = tf.keras.utils.image_dataset_from_directory(
     directory='./data',
     labels='inferred',
@@ -32,7 +37,7 @@ validation_ds = tf.keras.utils.image_dataset_from_directory(
     subset='validation'
 )
 
-
+# Info of the dataset
 class_names = train_ds.class_names
 print("Class names:", class_names)
 
@@ -48,7 +53,6 @@ train_ds = train_ds.map(process)
 validation_ds = validation_ds.map(process)
 
 # create CNN model
-
 model = Sequential()
 model.add(Input(shape=(256, 256, 3)))
 model.add(Conv2D(32,kernel_size=(3,3),padding='valid',activation='relu'))
