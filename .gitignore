@@ -2,3 +2,5 @@ myenv/
 face_mask_model.keras
 .idea
 __pycache__/
+runs
+data/

@@ -48,8 +48,9 @@ The model was trained on the [Face Mask Dataset](https://www.kaggle.com/datasets
 ## 🛠️ Installation & Setup
 
 1.  **Clone the repository:**
+
     ```bash
-    git clone [https://github.com/vishalgupta-git/face-mask-detection.git](https://github.com/vishalgupta-git/face-mask-detection.git)
+    git clone https://github.com/vishalgupta-git/face-mask-detection.git
     cd face-mask-detection
     ```
 
