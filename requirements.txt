@@ -4,6 +4,6 @@ numpy
 pandas
 matplotlib
 seaborn
-tensorflow
 opencv-python
 ultralytics
+tensorflow[and-cuda]
