@@ -4,6 +4,7 @@ numpy
 pandas
 matplotlib
 seaborn
+scikit-learn
 opencv-python
 ultralytics
 tensorflow[and-cuda]

@@ -100,7 +100,7 @@ model.add(Dense(1, activation='sigmoid'))
 # --- 6. Callbacks ---
 callbacks = [
     EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True, verbose=1),
-    ModelCheckpoint('best_face_mask_model.keras', monitor='val_accuracy', save_best_only=True, verbose=1)
+    ModelCheckpoint('face_mask_model.keras', monitor='val_accuracy', save_best_only=True, verbose=1)
 ]
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
